@@ -1,0 +1,539 @@
+From: "Saved by Internet Explorer 11"
+Subject: =?Windows-1252?Q?This_page_can=92t_be_displayed?=
+Date: Sun, 23 Oct 2016 20:29:52 +0200
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01D22D6C.357F9FC0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7601.23491
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01D22D6C.357F9FC0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: res://ieframe.dll/dnserror.htm
+
+=EF=BB=BF<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content=3D"IE=3D11.0000"=20
+http-equiv=3D"X-UA-Compatible">
+         <LINK href=3D"res://ieframe.dll/NewErrorPageTemplate.css" =
+rel=3D"stylesheet"=20
+type=3D"text/css">        =20
+<META http-equiv=3D"Content-Type" content=3D"text/html; =
+charset=3DUTF-8">        =20
+<TITLE>This page can=E2=80=99t be displayed</TITLE>        =20
+<SCRIPT language=3D"javascript" =
+src=3D"res://ieframe.dll/errorPageStrings.js" =
+type=3D"text/javascript"></SCRIPT>
+        =20
+<SCRIPT language=3D"javascript" =
+src=3D"res://ieframe.dll/httpErrorPagesScripts.js" =
+type=3D"text/javascript"></SCRIPT>
+    =20
+<META name=3D"GENERATOR" content=3D"MSHTML 11.00.9600.18450"></HEAD>     =
+
+<BODY onload=3D"javascript:getInfo();">
+<DIV class=3D"mainContent" id=3D"contentContainer">
+<DIV class=3D"title" id=3D"mainTitle">This page can=E2=80=99t be =
+displayed</DIV>
+<DIV class=3D"taskSection" id=3D"taskSection">
+<UL class=3D"tasks" id=3D"cantDisplayTasks">
+  <LI id=3D"task1-1">Make sure the web address <SPAN =
+class=3D"webpageURL" id=3D"webpage"></SPAN>is=20
+  correct.</LI>
+  <LI id=3D"task1-2">Look for the page with your search engine.</LI>
+  <LI id=3D"task1-3">Refresh the page in a few minutes.</LI></UL>
+<UL class=3D"tasks" id=3D"notConnectedTasks" style=3D"display: none;">
+  <LI id=3D"task2-1">Check that all network cables are plugged in.</LI>
+  <LI id=3D"task2-2">Verify that airplane mode is turned off.</LI>
+  <LI id=3D"task2-3">Make sure your wireless switch is turned on.</LI>
+  <LI id=3D"task2-4">See if you can connect to mobile broadband.</LI>
+  <LI id=3D"task2-5">Restart your router.</LI></UL></DIV>
+<DIV><BUTTON class=3D"diagnoseButton" id=3D"diagnose" =
+onclick=3D"javascript:diagnoseConnectionAndRefresh(); return false;">Fix =
+
+connection problems</BUTTON></DIV></DIV></BODY></HTML>
+
+------=_NextPart_000_0000_01D22D6C.357F9FC0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: res://ieframe.dll/NewErrorPageTemplate.css
+
+body {
+	margin: 0em; color: rgb(87, 87, 87); font-family: "Segoe UI", =
+"verdana", "arial"; background-repeat: repeat-x; background-color: =
+white;
+}
+.mainContent {
+	width: 700px; margin-top: 80px; margin-right: 120px; margin-left: =
+120px;
+}
+.title {
+	color: rgb(39, 120, 236); font-family: "Segoe UI", "verdana"; =
+font-size: 38pt; font-weight: 300; margin-bottom: 20px; vertical-align: =
+bottom; position: relative;
+}
+.errorExplanation {
+	color: rgb(0, 0, 0); font-family: "Segoe UI", "verdana", "arial"; =
+font-size: 12pt; text-decoration: none;
+}
+.taskSection {
+	margin-top: 20px; margin-bottom: 40px; position: relative;
+}
+.tasks {
+	color: rgb(0, 0, 0); padding-top: 5px; font-family: "Segoe UI", =
+"verdana"; font-size: 12pt; font-weight: 200;
+}
+li {
+	margin-top: 8px;
+}
+.diagnoseButton {
+	font-size: 9pt;
+}
+.launchInternetOptionsButton {
+	font-size: 9pt;
+}
+.webpageURL {
+	direction: ltr;
+}
+.hidden {
+	display: none;
+}
+a {
+	color: rgb(0, 102, 204); font-family: "Segoe UI", "verdana", "arial"; =
+font-size: 11pt; text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+------=_NextPart_000_0000_01D22D6C.357F9FC0
+Content-Type: application/javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: res://ieframe.dll/errorPageStrings.js
+
+=EF=BB=BF//Split out for localization.
+var L_GOBACK_TEXT =3D "Go back to the previous page.";
+var L_REFRESH_TEXT =3D "Refresh the page.";
+var L_MOREINFO_TEXT =3D "More information";
+var L_OFFLINE_USERS_TEXT =3D "For offline users";
+var L_RELOAD_TEXT =3D "Retype the address.";
+var L_HIDE_HOTKEYS_TEXT =3D "Hide tab shortcuts";
+var L_SHOW_HOTKEYS_TEXT =3D "Show more tab shortcuts";
+var L_CONNECTION_OFF_TEXT =3D "You are not connected to the Internet. =
+Check your Internet connection.";
+var L_CONNECTION_ON_TEXT =3D "It appears you are connected to the =
+Internet, but you might want to try to reconnect to the Internet.";
+
+//used by invalidcert.js and hstscerterror.js
+var L_CertUnknownCA_TEXT =3D "The security certificate presented by this =
+website was not issued by a trusted certificate authority.";
+var L_CertExpired_TEXT =3D "The security certificate presented by this =
+website has expired or is not yet valid.";
+var L_CertCNMismatch_TEXT =3D "The security certificate presented by =
+this website was issued for a different website's address.";
+var L_CertRevoked_TEXT =3D "This organization's certificate has been =
+revoked.";
+var L_CertSigFailed_TEXT =3D "The security certificate presented by this =
+website is not secure.";
+
+var L_PhishingThreat_TEXT =3D "Phishing threat: This is a phishing =
+website that impersonates a trusted website to trick you into revealing =
+personal or financial information.";
+var L_MalwareThreat_TEXT =3D "Malicious software threat: This site =
+contains links to viruses or other software programs that can reveal =
+personal information stored or typed on your computer to malicious =
+persons.";
+
+var L_TopFrameUnsafe_TEXT =3D "This website has been reported as =
+unsafe";
+var L_ContentUnsafe_TEXT =3D "Content on this website has been reported =
+as unsafe";
+var L_Content_TEXT =3D "Hosted by:  ";
+
+var L_ACR_Title_TEXT =3D "We were unable to return you to %s.";
+var L_ACR_TitleFallback_TEXT =3D "We were unable to return you to the =
+page you were viewing.";
+var L_ACR_ReturnTo_TEXT =3D "Try to return to %s";
+var L_ACR_ReturnToFallback_TEXT =3D "Try to return to the page you were =
+viewing";
+var L_ACR_GoHome_TEXT =3D "Go to your home page";
+
+//used by new dnserror.htm
+var L_INTERNET_NOT_CONNECTED_TEXT =3D "You\u2019re not connected to a =
+network";
+var L_INTERNET_CONNECTED_TEXT =3D "This page can\u2019t be displayed";
+
+//used by insecurefallbackblock.htm
+var L_InsecureSSL3FallbackDetected_TEXT =3D "Error: Connecting to this =
+site has been blocked because it would require an insecure fallback to =
+SSL 3.0";
+
+//used by fallbacknavcancel.htm
+var L_InsecureSSL3FallbackDetected_IFRAME_TEXT =3D "Error: A resource =
+embedded in an iframe on this site has been blocked because it would =
+require an insecure fallback to SSL 3.0";
+
+var L_TLS_SSL_TEXT =3D "Make sure TLS and SSL protocols are enabled. Go =
+to Tools > Internet Options > Advanced > Settings > Security";
+
+// Used by IM DNS error page
+var L_THIS_PAGE_CANT_BE_DISPLAYED_TEXT =3D "This page can\u2019t be =
+displayed";
+var L_YOU_ARE_NOT_CONNECTED_TEXT =3D "You\u2019re not connected";
+
+// Used by IExtensionValidation error page
+var L_ActiveXUnsafe_TEXT =3D "%s blocked this website";
+var L_ActiveXUnsafe_Frame_TEXT =3D "%s blocked content on this website";
+var L_ActiveXUnsafe_Explain_TEXT =3D "%s blocked this site because it =
+might contain threats to your PC or your privacy.";
+var L_ActiveXUnsafe_Hosted_TEXT =3D "Hosted by: %s";
+
+
+------=_NextPart_000_0000_01D22D6C.357F9FC0
+Content-Type: application/javascript
+Content-Transfer-Encoding: quoted-printable
+Content-Location: res://ieframe.dll/httpErrorPagesScripts.js
+
+=EF=BB=BF
+function isExternalUrlSafeForNavigation(urlStr)
+{
+var regEx =3D new RegExp("^(http(s?)|ftp|file)://", "i");
+return regEx.exec(urlStr);
+}
+function clickRefresh()
+{
+var location =3D window.location.href;
+var poundIndex =3D location.indexOf('#');
+if (poundIndex !=3D -1 && poundIndex+1 < location.length && =
+isExternalUrlSafeForNavigation(location.substring(poundIndex+1)))
+{
+window.location.replace(location.substring(poundIndex+1));
+}
+}
+function navCancelInit()
+{
+var location =3D window.location.href;
+var poundIndex =3D location.indexOf('#');
+if (poundIndex !=3D -1 && poundIndex+1 < location.length && =
+isExternalUrlSafeForNavigation(location.substring(poundIndex+1)))
+{
+var bElement =3D document.createElement("A");
+bElement.innerText =3D L_REFRESH_TEXT;
+bElement.href =3D 'javascript:clickRefresh()';
+navCancelContainer.appendChild(bElement);
+}
+else
+{
+var textNode =3D document.createTextNode(L_RELOAD_TEXT);
+navCancelContainer.appendChild(textNode);
+}
+}
+function expandCollapse(elem, changeImage)
+{
+if (document.getElementById)
+{
+ecBlock =3D document.getElementById(elem);
+if (ecBlock !=3D undefined && ecBlock !=3D null)
+{
+if (changeImage)
+{
+elemImage =3D document.getElementById(elem + "Image");
+}
+if (!changeImage || (elemImage !=3D undefined && elemImage !=3D null))
+{
+if (ecBlock.currentStyle.display =3D=3D "none" || =
+ecBlock.currentStyle.display =3D=3D null || ecBlock.currentStyle.display =
+=3D=3D "")
+{
+ecBlock.style.display =3D "block";
+if (changeImage)
+{
+elemImage.src =3D "up.png";
+}
+}
+else if (ecBlock.currentStyle.display =3D=3D "block")
+{
+ecBlock.style.display =3D "none";
+if (changeImage)
+{
+elemImage.src =3D "down.png";
+}
+}
+else
+{
+ecBlock.style.display =3D "block";
+if (changeImage)
+{
+elemImage.src =3D "up.png";
+}
+}
+}
+}
+}
+}
+function initHomepage()
+{
+DocURL=3Ddocument.location.href;
+var poundIndex =3D DocURL.indexOf('#');
+if (poundIndex !=3D -1 && poundIndex+1 < location.length && =
+isExternalUrlSafeForNavigation(location.substring(poundIndex+1)))
+{
+protocolIndex=3DDocURL.indexOf("://", 4);
+serverIndex=3DDocURL.indexOf("/", protocolIndex + 3);
+BeginURL=3DDocURL.indexOf("#",1) + 1;
+urlresult=3DDocURL.substring(BeginURL, serverIndex);
+if (protocolIndex - BeginURL > 7)
+urlresult=3D"";
+displayresult=3DDocURL.substring(protocolIndex + 3, serverIndex);
+}
+else
+{
+displayresult =3D "";
+urlresult =3D "";
+}
+var aElement =3D document.createElement("A");
+aElement.innerText =3D displayresult;
+aElement.href =3D urlresult;
+homepageContainer.appendChild(aElement);
+}
+function initConnectionStatus()
+{
+if (navigator.onLine)
+{
+checkConnection.innerText =3D L_CONNECTION_ON_TEXT;
+}
+else
+{
+checkConnection.innerText =3D L_CONNECTION_OFF_TEXT;
+}
+}
+function initGoBack()
+{
+if (history.length < 1)
+{
+var textNode =3D document.createTextNode(L_GOBACK_TEXT);
+goBackContainer.appendChild(textNode);
+}
+else
+{
+var bElement =3D document.createElement("A");
+bElement.innerText =3D L_GOBACK_TEXT ;
+bElement.href =3D "javascript:history.back();";
+goBackContainer.appendChild(bElement);
+}
+}
+function initMoreInfo(infoBlockID)
+{
+var bElement =3D document.createElement("A");
+bElement.innerText =3D L_MOREINFO_TEXT;
+bElement.href =3D "javascript:expandCollapse(\'infoBlockID\', true);";
+moreInfoContainer.appendChild(bElement);
+}
+function initOfflineUser(offlineUserID)
+{
+var bElement =3D document.createElement("A");
+bElement.innerText =3D L_OFFLINE_USERS_TEXT;
+bElement.href =3D "javascript:expandCollapse('offlineUserID', true);";
+offlineUserContainer.appendChild(bElement);
+}
+function initUnframeContent()
+{
+var location =3D window.location.href;
+var poundIndex =3D location.indexOf('#');
+if (poundIndex !=3D -1 && poundIndex+1 < location.length && =
+isExternalUrlSafeForNavigation(location.substring(poundIndex+1)))
+{
+document.getElementById("whatToDoIntro").style.display=3D"";
+document.getElementById("whatToDoBody").style.display=3D"";
+}
+}
+function removeNoScriptElements() {
+var noScriptElements =3D document.getElementsByTagName("noscript");
+for (var i =3D noScriptElements.length - 1; i >=3D 0; i--)
+{
+var bElement =3D noScriptElements[i];
+if (bElement !=3D=3D undefined && bElement !=3D=3D null)
+{
+bElement.removeNode(true);
+}
+}
+}
+function makeNewWindow()
+{
+var location =3D window.location.href;
+var poundIndex =3D location.indexOf('#');
+if (poundIndex !=3D -1 && poundIndex+1 < location.length && =
+isExternalUrlSafeForNavigation(location.substring(poundIndex+1)))
+{
+window.open(location.substring(poundIndex+1));
+}
+}
+function setTabInfo(tabInfoBlockID)
+{
+var bPrevElement =3D document.getElementById("tabInfoTextID");
+var bPrevImage =3D document.getElementById("tabInfoBlockIDImage");
+if (bPrevElement !=3D null)
+{
+tabInfoContainer.removeChild(bPrevElement);
+}
+if (bPrevImage !=3D null)
+{
+tabImageContainer.removeChild(bPrevImage);
+}
+var bElement =3D document.createElement("A");
+var bImageElement =3D document.createElement("IMG");
+var ecBlock =3D document.getElementById(tabInfoBlockID);
+if ((ecBlock !=3D undefined && ecBlock !=3D null) &&
+(ecBlock.currentStyle.display =3D=3D "none" || =
+ecBlock.currentStyle.display =3D=3D null || ecBlock.currentStyle.display =
+=3D=3D ""))
+{
+bElement.innerText =3D L_SHOW_HOTKEYS_TEXT;
+bImageElement.alt =3D L_SHOW_HOTKEYS_TEXT;
+bImageElement.src=3D"down.png";
+}
+else
+{
+bElement.innerText =3D L_HIDE_HOTKEYS_TEXT;
+bImageElement.alt =3D L_HIDE_HOTKEYS_TEXT;
+bImageElement.src=3D"up.png";
+}
+bElement.id =3D "tabInfoTextID";
+bElement.href =3D "javascript:expandCollapse(\'tabInfoBlockID\', false); =
+setTabInfo('tabInfoBlockID');";
+bImageElement.id=3D"tabInfoBlockIDImage";
+bImageElement.border=3D"0";
+bImageElement.className=3D"actionIcon";
+tabInfoContainer.appendChild(bElement);
+tabImageContainer.appendChild(bImageElement);
+}
+function launchInternetOptions()
+{
+window.external.msLaunchInternetOptions();
+}
+function diagnoseConnection()
+{
+window.external.DiagnoseConnection();
+}
+function diagnoseConnectionAndRefresh()
+{
+window.external.DiagnoseConnection();
+if (navigator.onLine)
+{
+clickRefresh();
+}
+}
+function getInfo()
+{
+checkConnection();
+if (document.addEventListener)
+{
+addEventListener("offline", reportConnectionEvent, false);
+}
+else
+{
+attachEvent("onoffline", reportConnectionEvent);
+}
+document.body.ononline =3D reportConnectionEvent;
+document.body.onoffline =3D reportConnectionEvent;
+}
+function checkConnection()
+{
+var newHeading =3D document.getElementById("mainTitle");
+var notConnectedTasks =3D document.getElementById("notConnectedTasks");
+var cantDisplayTasks =3D document.getElementById("cantDisplayTasks");
+if (navigator.onLine)
+{
+document.title =3D L_INTERNET_CONNECTED_TEXT;
+newHeading.textContent =3D L_INTERNET_CONNECTED_TEXT;
+addURL();
+notConnectedTasks.style.display =3D "none";
+cantDisplayTasks.style.display =3D "";
+}
+else
+{
+document.title =3D L_INTERNET_NOT_CONNECTED_TEXT;
+newHeading.textContent =3D L_INTERNET_NOT_CONNECTED_TEXT;
+notConnectedTasks.style.display =3D "";
+cantDisplayTasks.style.display =3D "none";
+}
+}
+function reportConnectionEvent(e)
+{
+if (!e) e =3D window.event;
+if ('online' =3D=3D e.type)
+{
+setTimeout ( "clickRefresh()", 1000 );
+}
+else if ('offline' =3D=3D e.type)
+{
+checkConnection();
+}
+else
+{
+checkConnection();
+}
+}
+function addURL()
+{
+var urlResult =3D "";
+var DocURL =3D document.location.href;
+var urlPlaceholder =3D document.getElementById("webpage");
+var beginIndex =3D DocURL.indexOf('#') + 1;
+if (DocURL.indexOf("file://", beginIndex) =3D=3D -1)
+{
+var protocolEndIndex =3D DocURL.indexOf("://", beginIndex);
+var endIndex=3DDocURL.indexOf("/", protocolEndIndex + 3);
+urlResult =3D DocURL.substring(beginIndex, endIndex);
+}
+urlPlaceholder.innerText =3D urlResult + " ";
+}
+function addDomainName()
+{
+var domainNamePlaceholder =3D document.getElementById("DomainName");
+domainNamePlaceholder.innerText =3D findValue("DomainName=3D") + " ";
+}
+function addProxyDetail()
+{
+var proxyDetailPlaceholder =3D document.getElementById("ProxyDetail");
+proxyDetailPlaceholder.innerText =3D findValue("ProxyDetail=3D");
+}
+function findValue(key)
+{
+var value =3D '';
+DocQuery =3D document.location.search;
+BeginString =3D DocQuery.indexOf(key);
+if (BeginString > 0)
+{
+BeginString +=3D key.length;
+EndString =3D Math.max(0, Math.min(DocQuery.indexOf("&", BeginString), =
+DocQuery.indexOf("#", BeginString)));
+if (EndString > 0)
+{
+value =3D DocQuery.substring(BeginString, EndString);
+}
+else
+{
+value =3D DocQuery.substring(BeginString);
+}
+}
+return value;
+}
+function isHTTPS(cantDisplayTasks)
+{
+var DocURL =3D document.location.href;
+var poundIndex =3D DocURL.indexOf('#');
+var protocolIndex =3D DocURL.indexOf("https://", poundIndex);
+if (protocolIndex>poundIndex)
+{
+var bElement =3D document.createElement("li");
+bElement.textContent =3D L_TLS_SSL_TEXT;
+cantDisplayTasks.appendChild(bElement);
+}
+}
+
+------=_NextPart_000_0000_01D22D6C.357F9FC0--
